@@ -5,47 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoría de Productos - El Rincón Mágico</title>
     <link rel="stylesheet" href="style.css">
-</head>   
-   
+</head>
 <body>
 
-    <header class="header">
-        <div class="header__logo">
-            <h1>El Rincón Mágico</h1>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="top-bar__container">
+                <span>Finalizar compra/domicilio fiscal</span>
+            </div>
         </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a href="categoria.html">Disfraces por Temática</a></li>
-                <li><a href="#">Disfraces por Edad</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Maquillaje</a></li>
-                <li><a href="#">Decoración</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#" class="header__nav-link--oferta">Ofertas</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="header-content__logo-brand">
+                <img src="https://placehold.co/100x100/ffffff/1e1d2b?text=Logo" alt="Logo Mágico" class="logo-brand__image">
+                <div class="logo-brand__text">
+                    <h1>El Rincón Mágico</h1>
+                    <h2>DEL DISFRAZ Y LA CELEBRACIÓN</h2>
+                </div>
+            </div>
+            <div class="header-content__search">
+                <input type="search" placeholder="¿Qué estás buscando?">
+                <button>&#x1F50D;</button>
+            </div>
+        </div>
     </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="categoria.html">Disfraces por Temática</a></li>
+            <li><a href="#">Disfraces por Edad</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Maquillaje</a></li>
+            <li><a href="#">Decoración</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">&#x1F6D2;</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <div class="category-header">
-            <h1 class="category-header__title">Disfraces de Superhéroes</h1>
-            <p class="category-header__description">Conviértete en el héroe que siempre quisiste ser con nuestra increíble colección de disfraces.</p>
+        <div class="category-header-v2">
+            <h1>Disfraces de Superhéroes</h1>
+            <p>Conviértete en el héroe que siempre quisiste ser con nuestra increíble colección de disfraces.</p>
         </div>
 
-        <div class="category-container">
-            <aside class="filters-sidebar">
-                <h3 class="filters-sidebar__title">Filtros</h3>
-                <div class="filter-group">
+        <div class="category-container-v2">
+            <aside class="filters-sidebar-v2">
+                <h3>Filtros</h3>
+                <div class="filter-group-v2">
                     <h4>Por Talla</h4>
                     <label><input type="checkbox" name="talla" value="s"> S</label>
                     <label><input type="checkbox" name="talla" value="m"> M</label>
                     <label><input type="checkbox" name="talla" value="l"> L</label>
                 </div>
-                <div class="filter-group">
-                    <h4>Por Precio</h4>
-                    <input type="range" name="precio" min="10" max="200">
-                </div>
-                <div class="filter-group">
+                <div class="filter-group-v2">
                     <h4>Por Ocasión</h4>
                     <label><input type="checkbox" name="ocasion" value="halloween"> Halloween</label>
                     <label><input type="checkbox" name="ocasion" value="carnaval"> Carnaval</label>
@@ -53,65 +63,28 @@
                 <button class="filters-sidebar__button">Aplicar Filtros</button>
             </aside>
 
-            <section class="product-grid-container">
-                <div class="products-grid">
-                    <div class="product-card" data-talla="m" data-ocasion="halloween">
-                        <img src="https://placehold.co/400x500/c62828/ffffff?text=Héroe+1" alt="Disfraz de Superhéroe A">
-                        <div class="product-card__info">
-                            <h4>Disfraz de Héroe Cósmico</h4>
-                            <p class="product-card__price">79.99 €</p>
-                            <a href="producto.html" class="card-button">Ver Producto</a>
+            <section class="product-grid-container-v2">
+                <div class="products-grid-v2">
+                    <div class="product-card-v2" data-talla="m" data-ocasion="halloween">
+                        <div class="product-card-v2__image-container">
+                             <img src="https://placehold.co/400x500/c62828/ffffff?text=Héroe+1" alt="Disfraz de Héroe Cósmico">
+                             <button class="product-card-v2__quick-view">👁️</button>
+                        </div>
+                        <div class="product-card-v2__info">
+                            <h3>Héroe Cósmico</h3>
+                            <p class="product-card-v2__type">Disfraz Completo</p>
+                            <div class="product-card-v2__rating"><span>★★★★☆</span> 4.8/5</div>
+                            <p class="product-card-v2__price">€79.99</p>
+                            <button class="product-card-v2__add-to-cart">+</button>
                         </div>
                     </div>
-                    <div class="product-card" data-talla="s" data-ocasion="carnaval">
-                        <img src="https://placehold.co/400x500/1565c0/ffffff?text=Héroe+2" alt="Disfraz de Superhéroe B">
-                        <div class="product-card__info">
-                            <h4>Traje de Vigilante Nocturna</h4>
-                            <p class="product-card__price">89.99 €</p>
-                            <a href="producto.html" class="card-button">Ver Producto</a>
-                        </div>
                     </div>
-                    <div class="product-card" data-talla="m" data-ocasion="carnaval">
-                        <img src="https://placehold.co/400x500/4a148c/ffffff?text=Héroe+3" alt="Disfraz de Superhéroe C">
-                        <div class="product-card__info">
-                            <h4>Armadura Estelar</h4>
-                            <p class="product-card__price">95.99 €</p>
-                            <a href="producto.html" class="card-button">Ver Producto</a>
-                        </div>
-                    </div>
-                </div>
             </section>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4 class="footer-column__title">El Rincón Mágico</h4>
-                <p>Tu tienda de disfraces y celebraciones para despertar la creatividad y la diversión en cada momento especial.</p>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-column__title">Enlaces Rápidos</h4>
-                <ul class="footer-column__list">
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Políticas de Envío</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-column__title">¡Ofertas Mágicas!</h4>
-                <p>Suscríbete para recibir descuentos exclusivos y novedades.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="tu.email@magico.com" class="newsletter-form__input">
-                    <button type="submit" class="newsletter-form__button">Suscribir</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 El Rincón Mágico del Disfraz y la Celebración. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <footer class="footer-v2">
+        </footer>
     
     <script src="script.js"></script>
 </body>
