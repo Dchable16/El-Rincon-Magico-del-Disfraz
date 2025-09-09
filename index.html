@@ -88,32 +88,44 @@
             </section>
         </div>
         
-        <section id="testimonios">
-            <h2>Lo que dicen nuestros magos y magas</h2>
-            <div class="testimonio-item">
-                <blockquote>"¡La calidad de los disfraces es increíble! Mi hijo fue el más feliz en su fiesta."</blockquote>
-                <cite>- Cliente Satisfecho</cite>
-            </div>
-        </section>
+        <div class="main-container">
+            <section id="testimonios" class="testimonials-section">
+                <h2 class="section-title">Lo que dicen nuestros magos y magas</h2>
+                <div class="testimonial-card">
+                    <p class="testimonial-card__quote">"¡La calidad de los disfraces es increíble! Mi hijo fue el más feliz en su fiesta. El envío fue rapidísimo y la atención al cliente, de primera. ¡Totalmente recomendado!"</p>
+                    <cite class="testimonial-card__author">- Cliente Satisfecho</cite>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="#">Políticas de Privacidad</a>
-            <a href="#">Contacto</a>
-            <a href="#">Preguntas Frecuentes (FAQ)</a>
-        </div>
-        <div class="social-media">
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4 class="footer-column__title">El Rincón Mágico</h4>
+                <p>Tu tienda de disfraces y celebraciones para despertar la creatividad y la diversión en cada momento especial.</p>
             </div>
-        <div class="newsletter">
-            <p>¡Suscríbete para recibir ofertas mágicas!</p>
-            <form>
-                <input type="email" placeholder="tu.email@magico.com">
-                <button type="submit">Suscribir</button>
-            </form>
-        </div>
-        <div class="iconos-confianza">
+            <div class="footer-column">
+                <h4 class="footer-column__title">Enlaces Rápidos</h4>
+                <ul class="footer-column__list">
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Políticas de Envío</a></li>
+                </ul>
             </div>
+            <div class="footer-column">
+                <h4 class="footer-column__title">¡Ofertas Mágicas!</h4>
+                <p>Suscríbete para recibir descuentos exclusivos y novedades.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="tu.email@magico.com" class="newsletter-form__input">
+                    <button type="submit" class="newsletter-form__button">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 El Rincón Mágico del Disfraz y la Celebración. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>
