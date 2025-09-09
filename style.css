@@ -1,0 +1,18 @@
+/* Importamos una fuente mágica y divertida desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos para todo el cuerpo de la página */
+body {
+    /* Familia de fuentes: Primero intenta con Poppins, si no, usa una fuente genérica sans-serif */
+    font-family: 'Poppins', sans-serif;
+    
+    /* Color de fondo suave para empezar */
+    background-color: #f5f0ff; /* Un lila muy claro */
+
+    /* Color de texto principal */
+    color: #333;
+
+    /* Quitamos los márgenes por defecto del navegador */
+    margin: 0;
+    padding: 0;
+}
