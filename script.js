@@ -64,4 +64,58 @@ if (thumbnailsContainer) {
     });
 }
 
+    // Verificamos si estamos en la página de categoría buscando el botón de filtros
+const filterButton = document.querySelector('.filters-sidebar__button');
+
+if (filterButton) {
+    // 1. Seleccionamos los elementos que necesitamos
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const allProducts = document.querySelectorAll('.product-card');
+
+    // 2. Creamos la función que se ejecutará al hacer clic en el botón
+    function applyFilters() {
+        // Obtenemos los filtros seleccionados
+        const selectedFilters = {
+            talla: [],
+            ocasion: []
+        };
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                // 'checkbox.name' es 'talla' u 'ocasion'
+                // 'checkbox.value' es 's', 'm', 'halloween', etc.
+                selectedFilters[checkbox.name].push(checkbox.value);
+            }
+        });
+
+        // 3. Recorremos cada producto para decidir si lo mostramos o lo ocultamos
+        allProducts.forEach(product => {
+            let shouldShow = true; // Por defecto, mostramos el producto
+            
+            const productTalla = product.dataset.talla;
+            const productOcasion = product.dataset.ocasion;
+
+            // Comprobamos el filtro de talla
+            if (selectedFilters.talla.length > 0 && !selectedFilters.talla.includes(productTalla)) {
+                shouldShow = false; // El producto no coincide, no lo mostramos
+            }
+
+            // Comprobamos el filtro de ocasión
+            if (selectedFilters.ocasion.length > 0 && !selectedFilters.ocasion.includes(productOcasion)) {
+                shouldShow = false; // El producto no coincide, no lo mostramos
+            }
+
+            // 4. Mostramos u ocultamos el producto
+            if (shouldShow) {
+                product.style.display = 'block'; // Mostrar
+            } else {
+                product.style.display = 'none';  // Ocultar
+            }
+        });
+    }
+
+    // 5. Añadimos el "detector de clics" al botón
+    filterButton.addEventListener('click', applyFilters);
+}
+
 });
