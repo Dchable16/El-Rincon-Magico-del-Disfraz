@@ -111,6 +111,7 @@ body {
     text-align: center;
     
     position: relative; /* Necesario para el efecto de superposición de color */
+    transition: background-image 1s ease-in-out;
 }
 
 /* Capa de color semitransparente sobre la imagen para mejorar la legibilidad del texto */
