@@ -344,51 +344,105 @@ h1, h2, h3, h4 {
 /* ======== ESTILOS SECCIÓN INSPIRACIÓN ======== */
 /* ============================================= */
 
-.inspiration-section {
-    background-color: #e1d4f9; /* Un lila un poco más oscuro que el fondo */
-    text-align: center;
-    padding: 60px 20px;
-    border-radius: 10px;
-    margin-top: 50px; /* Espacio para separarlo de la sección anterior */
+/* ============================================= */
+/* ====== BLOQUES DE INFORMACIÓN V2 ============ */
+/* ============================================= */
+.info-blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.inspiration-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.inspiration-section p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px auto; /* Centra el párrafo */
-}
-
-.testimonials-section {
-    padding-bottom: 40px;
-}
-
-.testimonial-card {
-    background-color: #ffffff;
-    border-left: 5px solid #6a1b9a; /* Borde izquierdo morado para destacar */
-    padding: 30px;
+.info-block {
+    height: 300px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    max-width: 800px; /* Ancho máximo para que no sea muy largo */
-    margin: 0 auto; /* Centra la tarjeta */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Alinea el contenido abajo */
+    padding: 25px;
+    overflow: hidden;
+    color: var(--color-blanco);
+}
+
+/* Capa oscura para legibilidad */
+.info-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.info-block__content {
+    position: relative;
+    z-index: 2;
+}
+
+.info-block__content h3 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+}
+
+.info-block__button {
+    background-color: var(--color-acento-dorado);
+    color: var(--color-fondo-oscuro);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.info-block__button:hover {
+    background-color: var(--color-blanco);
+}
+
+
+/* ============================================= */
+/* ============ TESTIMONIOS V2 ================= */
+/* ============================================= */
+.testimonials-section-v2 {
+    background-color: var(--color-primario-verde);
+    padding: 60px 20px;
+}
+
+.testimonials-v2__container {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.testimonial-card__quote {
-    font-size: 20px;
+.testimonial-card-v2 {
+    margin-top: 30px;
+}
+
+.testimonial-card-v2__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--color-acento-dorado);
+    margin-bottom: 20px;
+}
+
+.testimonial-card-v2__quote {
+    font-size: 18px;
     font-style: italic;
     line-height: 1.6;
+    color: var(--color-texto-principal);
     margin: 0 0 20px 0;
-    color: #555;
 }
 
-.testimonial-card__author {
+.testimonial-card-v2__author {
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
-    color: #333;
+    color: var(--color-acento-dorado);
     font-style: normal;
 }
 
