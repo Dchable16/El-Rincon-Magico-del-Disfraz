@@ -16,3 +16,79 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.header {
+    /* Usamos Flexbox para alinear el logo a la izquierda y la navegación a la derecha */
+    display: flex;
+    justify-content: space-between; /* Crea espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    
+    padding: 15px 30px; /* 15px de espacio arriba/abajo, 30px a los lados */
+    background-color: #ffffff; /* Fondo blanco para el header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    position: sticky; /* Hacemos que el header se quede fijo al hacer scroll */
+    top: 0;
+    z-index: 100; /* Asegura que el header esté por encima de otros elementos */
+}
+
+.header__logo h1 {
+    margin: 0; /* Quitamos el margen por defecto del h1 */
+    font-size: 24px; /* Tamaño de la fuente del logo */
+    color: #6a1b9a; /* Un color morado mágico */
+}
+
+/* Estilos para la lista de navegación */
+.header__nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Quitamos los puntos de la lista */
+    display: flex; /* Ponemos los elementos en fila */
+    gap: 25px; /* Espacio entre cada elemento del menú */
+}
+
+/* Estilos para cada enlace del menú */
+.header__nav a {
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    color: #333; /* Color de texto oscuro */
+    font-weight: 700; /* Hacemos la letra negrita */
+    font-size: 16px;
+    padding: 5px 0; /* Pequeño espacio para el efecto de subrayado */
+    position: relative; /* Necesario para el efecto de la línea inferior */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Efecto al pasar el ratón por encima de un enlace */
+.header__nav a:hover {
+    color: #6a1b9a; /* Cambia a color morado */
+}
+
+/* Línea animada que aparece debajo del enlace al pasar el ratón */
+.header__nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #6a1b9a;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* La línea empieza sin anchura */
+    transform-origin: center;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.header__nav a:hover::after {
+    transform: scaleX(1); /* La línea crece hasta el 100% de la anchura */
+}
+
+/* Estilo especial para el enlace de "Ofertas" */
+.header__nav-link--oferta {
+    color: #d81b60; /* Un color rosa/fucsia para destacar */
+}
+
+.header__nav-link--oferta:hover {
+    color: #ad1457; /* Un fucsia más oscuro al pasar el ratón */
+}
+
+.header__nav-link--oferta::after {
+    background-color: #d81b60; /* La línea animada también cambia de color */
+}
