@@ -164,3 +164,106 @@ body {
     transform: translateY(-3px); /* Se eleva un poco */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* La sombra se hace más pronunciada */
 }
+
+/* ============================================= */
+/* ====== ESTILOS DE CONTENIDO PRINCIPAL ======= */
+/* ============================================= */
+
+.main-container {
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 40px 20px; /* Espaciado interno */
+}
+
+/* Estilo general para los títulos de cada sección */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* ============================================= */
+/* ====== ESTILOS DE TARJETAS (Cards) ========== */
+/* ============================================= */
+
+/* Usamos CSS Grid para un diseño de cuadrícula moderno y flexible */
+.collections-grid, .products-grid {
+    display: grid;
+    /* Crea 3 columnas de igual tamaño en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo base para las tarjetas de colección y producto */
+.collection-card, .product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover, .product-card:hover {
+    transform: translateY(-5px); /* La tarjeta se eleva un poco */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* La sombra se intensifica */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.collection-card img, .product-card img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto;
+    display: block;
+}
+
+/* Estilo para la zona de información de la tarjeta */
+.collection-card__info, .product-card__info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6a1b9a; /* Color morado mágico */
+    margin: 10px 0;
+}
+
+/* Botón genérico para las tarjetas */
+.card-button {
+    display: inline-block;
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #4a148c; /* Morado más oscuro */
+}
+
+/* ============================================= */
+/* ======== ESTILOS SECCIÓN INSPIRACIÓN ======== */
+/* ============================================= */
+
+.inspiration-section {
+    background-color: #e1d4f9; /* Un lila un poco más oscuro que el fondo */
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-top: 50px; /* Espacio para separarlo de la sección anterior */
+}
+
+.inspiration-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.inspiration-section p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Centra el párrafo */
+}
