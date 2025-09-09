@@ -1,5 +1,8 @@
-/* Importamos una fuente mágica y divertida desde Google Fonts */
+/* ============================================= */
+/* =========== ESTILOS GLOBALES V2 ============= */
+/* ============================================= */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap');
+
 :root {
     --color-fondo-oscuro: #1e1d2b;
     --color-primario-verde: #0f3d3d;
@@ -11,10 +14,7 @@
 
 body {
     background-color: var(--color-fondo-oscuro);
-    /* Opcional: Para un fondo con textura como el de la imagen, puedes usar una imagen sutil */
-    /* background-image: url('URL_DE_TU_IMAGEN_DE_FONDO_SUTIL'); */
-    
-    font-family: 'Lato', sans-serif; /* Nueva fuente base para el texto */
+    font-family: 'Lato', sans-serif;
     color: var(--color-texto-principal);
     margin: 0;
     padding: 0;
@@ -24,7 +24,9 @@ h1, h2, h3, h4 {
     font-family: 'Cinzel', serif;
 }
 
-/* --- Barra Superior --- */
+/* ============================================= */
+/* =========== ENCABEZADO Y NAV V2 ============= */
+/* ============================================= */
 .top-bar {
     background-color: #111;
     color: var(--color-texto-secundario);
@@ -37,8 +39,6 @@ h1, h2, h3, h4 {
     padding: 0 20px;
     text-align: right;
 }
-
-/* --- Encabezado Principal --- */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,6 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     padding: 20px;
 }
-
 .header-content__logo-brand {
     display: flex;
     align-items: center;
@@ -63,14 +62,12 @@ h1, h2, h3, h4 {
     line-height: 1;
 }
 .logo-brand__text h2 {
-    font-family: 'Lato', sans-serif; /* Usamos la fuente normal para el subtítulo */
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     color: var(--color-texto-secundario);
     margin: 0;
     letter-spacing: 1px;
 }
-
-/* --- Barra de Búsqueda --- */
 .header-content__search {
     display: flex;
     border: 1px solid var(--color-primario-verde);
@@ -92,8 +89,6 @@ h1, h2, h3, h4 {
     cursor: pointer;
     font-size: 18px;
 }
-
-/* --- Barra de Navegación Principal --- */
 .main-nav {
     background-color: var(--color-primario-verde);
     padding: 10px 0;
@@ -120,105 +115,19 @@ h1, h2, h3, h4 {
     border-bottom-color: var(--color-acento-dorado);
 }
 
-/* --- Hero Carrusel V2 --- */
+/* ============================================= */
+/* ============ SECCIONES PRINCIPALES ========== */
+/* ============================================= */
 .hero-v2 {
-    height: 500px; /* Altura fija para el carrusel */
+    height: 500px;
     max-width: 1200px;
-    margin: 30px auto; /* Espacio arriba y abajo */
+    margin: 30px auto;
     border-radius: 10px;
     background-image: url('https://images.unsplash.com/photo-1541187714594-73d7516db213?q=80&w=2070');
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
 }
-
-.hero {
-    /* Establecemos una altura relativa a la ventana del navegador */
-    height: 60vh; /* Ocupará el 60% de la altura de la pantalla */
-    
-    /* Imagen de fondo */
-    /* **IMPORTANTE**: Reemplaza la URL con una de tus propias imágenes */
-    background-image: url('https://images.unsplash.com/photo-1541187714594-73d7516db213?q=80&w=2070');
-    background-size: cover; /* La imagen cubre todo el espacio sin deformarse */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-
-    /* Usamos Flexbox para centrar el contenido fácilmente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    position: relative; /* Necesario para el efecto de superposición de color */
-    transition: background-image 1s ease-in-out;
-}
-
-/* Capa de color semitransparente sobre la imagen para mejorar la legibilidad del texto */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
-    z-index: 1; /* Se coloca entre la imagen de fondo y el contenido */
-}
-
-/* Contenedor del texto para que se muestre por encima de la capa de color */
-.hero__content {
-    position: relative;
-    z-index: 2; /* Se coloca por encima de la capa ::before */
-    color: #ffffff; /* Color de texto blanco */
-    padding: 20px;
-}
-
-.hero__title {
-    font-size: 48px; /* Tamaño grande para el título principal */
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.hero__subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-/* Estilo para el botón de llamada a la acción (CTA) */
-.hero__cta-button {
-    display: inline-block;
-    background-color: #d81b60; /* El mismo color fucsia de "Ofertas" */
-    color: #ffffff;
-    padding: 15px 35px; /* Espaciado interno para hacerlo más grande */
-    border-radius: 50px; /* Bordes completamente redondeados */
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para que resalte */
-    transition: all 0.3s ease; /* Transición suave para todos los efectos */
-}
-
-.hero__cta-button:hover {
-    background-color: #ad1457; /* Color más oscuro al pasar el ratón */
-    transform: translateY(-3px); /* Se eleva un poco */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* La sombra se hace más pronunciada */
-}
-
-/* ============================================= */
-/* ====== ESTILOS DE CONTENIDO PRINCIPAL ======= */
-/* ============================================= */
-
-.main-container {
-    max-width: 1200px; /* Ancho máximo para el contenido */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    padding: 40px 20px; /* Espaciado interno */
-}
-
-/* ============================================= */
-/* ====== ESTILOS DE TARJETAS (Cards) ========== */
-/* ============================================= */
-
 .section-title-v2 {
     font-family: 'Cinzel', serif;
     text-align: center;
@@ -227,18 +136,14 @@ h1, h2, h3, h4 {
     margin-bottom: 40px;
     letter-spacing: 2px;
 }
-
-/* --- Cuadrícula de Productos V2 --- */
 .products-grid-v2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cuadrícula responsive */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* --- Tarjeta de Producto V2 --- */
 .product-card-v2 {
     background-color: var(--color-blanco);
     color: var(--color-fondo-oscuro);
@@ -248,7 +153,6 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
 }
-
 .product-card-v2__image-container {
     position: relative;
 }
@@ -257,7 +161,6 @@ h1, h2, h3, h4 {
     height: auto;
     display: block;
 }
-
 .product-card-v2__quick-view {
     position: absolute;
     top: 10px;
@@ -273,9 +176,8 @@ h1, h2, h3, h4 {
     transition: opacity 0.3s ease;
 }
 .product-card-v2:hover .product-card-v2__quick-view {
-    opacity: 1; /* El botón aparece al pasar el ratón */
+    opacity: 1;
 }
-
 .product-card-v2__info {
     padding: 20px;
     text-align: center;
@@ -304,7 +206,6 @@ h1, h2, h3, h4 {
     font-weight: 700;
     margin: 0;
 }
-
 .product-card-v2__add-to-cart {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-blanco);
@@ -315,7 +216,7 @@ h1, h2, h3, h4 {
     font-size: 28px;
     cursor: pointer;
     position: absolute;
-    bottom: -25px; /* Mitad afuera */
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     transition: background-color 0.3s ease;
@@ -323,30 +224,6 @@ h1, h2, h3, h4 {
 .product-card-v2__add-to-cart:hover {
     background-color: var(--color-primario-verde);
 }
-
-/* Botón genérico para las tarjetas */
-.card-button {
-    display: inline-block;
-    background-color: #6a1b9a;
-    color: #ffffff;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-    background-color: #4a148c; /* Morado más oscuro */
-}
-
-/* ============================================= */
-/* ======== ESTILOS SECCIÓN INSPIRACIÓN ======== */
-/* ============================================= */
-
-/* ============================================= */
-/* ====== BLOQUES DE INFORMACIÓN V2 ============ */
-/* ============================================= */
 .info-blocks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -355,7 +232,6 @@ h1, h2, h3, h4 {
     margin: 60px auto;
     padding: 0 20px;
 }
-
 .info-block {
     height: 300px;
     border-radius: 8px;
@@ -363,13 +239,11 @@ h1, h2, h3, h4 {
     background-position: center;
     position: relative;
     display: flex;
-    align-items: flex-end; /* Alinea el contenido abajo */
+    align-items: flex-end;
     padding: 25px;
     overflow: hidden;
     color: var(--color-blanco);
 }
-
-/* Capa oscura para legibilidad */
 .info-block::before {
     content: '';
     position: absolute;
@@ -379,17 +253,14 @@ h1, h2, h3, h4 {
     height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
 }
-
 .info-block__content {
     position: relative;
     z-index: 2;
 }
-
 .info-block__content h3 {
     font-size: 24px;
     margin: 0 0 15px 0;
 }
-
 .info-block__button {
     background-color: var(--color-acento-dorado);
     color: var(--color-fondo-oscuro);
@@ -399,30 +270,21 @@ h1, h2, h3, h4 {
     font-weight: 700;
     transition: background-color 0.3s ease;
 }
-
 .info-block__button:hover {
     background-color: var(--color-blanco);
 }
-
-
-/* ============================================= */
-/* ============ TESTIMONIOS V2 ================= */
-/* ============================================= */
 .testimonials-section-v2 {
     background-color: var(--color-primario-verde);
     padding: 60px 20px;
 }
-
 .testimonials-v2__container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
-
 .testimonial-card-v2 {
     margin-top: 30px;
 }
-
 .testimonial-card-v2__avatar {
     width: 80px;
     height: 80px;
@@ -430,7 +292,6 @@ h1, h2, h3, h4 {
     border: 3px solid var(--color-acento-dorado);
     margin-bottom: 20px;
 }
-
 .testimonial-card-v2__quote {
     font-size: 18px;
     font-style: italic;
@@ -438,7 +299,6 @@ h1, h2, h3, h4 {
     color: var(--color-texto-principal);
     margin: 0 0 20px 0;
 }
-
 .testimonial-card-v2__author {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -447,194 +307,12 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================= */
-/* ================ FOOTER V2 ================== */
-/* ============================================= */
-.footer-v2 {
-    background-color: var(--color-primario-verde);
-    color: var(--color-texto-principal);
-    padding-top: 50px;
-    margin-top: 60px;
-}
-
-.footer-v2__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-}
-
-.footer-v2__column h4 {
-    font-size: 18px;
-    color: var(--color-blanco);
-    margin-bottom: 20px;
-}
-
-.footer-v2__column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-v2__column a {
-    color: var(--color-texto-secundario);
-    text-decoration: none;
-    line-height: 2;
-    transition: color 0.3s ease;
-}
-
-.footer-v2__column a:hover {
-    color: var(--color-acento-dorado);
-}
-
-.footer-v2__newsletter {
-    display: flex;
-}
-
-.footer-v2__newsletter input {
-    flex-grow: 1;
-    border: none;
-    background-color: var(--color-fondo-oscuro);
-    color: var(--color-texto-principal);
-    padding: 12px;
-    border-radius: 5px 0 0 5px;
-}
-
-.footer-v2__newsletter button {
-    border: none;
-    background-color: var(--color-acento-dorado);
-    color: var(--color-fondo-oscuro);
-    font-weight: 700;
-    font-size: 20px;
-    padding: 0 15px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-.footer-v2__bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: var(--color-texto-secundario);
-}
-
-.newsletter-form__input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-.newsletter-form__button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    background-color: #6a1b9a;
-    color: #ffffff;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form__button:hover {
-    background-color: #4a148c;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #444;
-}
-
-/* ============================================= */
-/* ============ DISEÑO RESPONSIVE ============== */
-/* ============================================= */
-/* Estilos para tablets y móviles (hasta 768px) */
-
-@media (max-width: 768px) {
-
-    /* --- AJUSTES GENERALES --- */
-    .section-title {
-        font-size: 28px; /* Títulos de sección más pequeños */
-    }
-
-    /* --- AJUSTES DEL ENCABEZADO --- */
-    .header {
-        flex-direction: column; /* Apila el logo sobre la navegación */
-        padding: 15px;
-    }
-
-    .header__logo {
-        margin-bottom: 15px;
-    }
-
-    .header__nav ul {
-        flex-direction: column; /* Apila los enlaces del menú */
-        gap: 15px;
-        text-align: center;
-    }
-
-    /* --- AJUSTES DE LA SECCIÓN HÉROE --- */
-    .hero {
-        height: 50vh; /* Altura un poco menor en móviles */
-    }
-
-    .hero__title {
-        font-size: 32px; /* Título principal más pequeño */
-    }
-
-    .hero__subtitle {
-        font-size: 16px;
-    }
-
-    /* --- AJUSTES DE LAS CUADRÍCULAS (Grids) --- */
-    
-    .footer-grid {
-        /* Pasamos de 3 columnas a 1 sola en el pie de página */
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    /* Centramos la línea decorativa del footer */
-    .footer-column h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .category-container {
-        flex-direction: column; /* Apila los filtros sobre los productos */
-    }
-    
-    .filters-sidebar {
-        flex: 0 0 auto; /* Resetea el ancho fijo en móviles */
-        margin-bottom: 30px;
-    }
-
-    /* --- AJUSTES DE LA PÁGINA DE PRODUCTO --- */
-    .product-container {
-        flex-direction: column; /* Apila la galería sobre la info */
-    }
-
-    .product-info__title {
-        font-size: 28px; /* Título más pequeño */
-    }
-}
-
-
-/* ============================================= */
 /* ====== PÁGINA DE CATEGORÍA V2 =============== */
 /* ============================================= */
-
 .category-header-v2 {
     text-align: center;
     padding: 50px 20px;
-    background-color: #111; /* Un negro un poco más suave */
+    background-color: #111;
 }
 .category-header-v2 h1 {
     margin: 0 0 10px 0;
@@ -647,17 +325,14 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     color: var(--color-texto-secundario);
 }
-
 .category-container-v2 {
     display: flex;
     gap: 30px;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
-    align-items: flex-start; /* Alinea los items al inicio */
+    align-items: flex-start;
 }
-
-/* --- Barra de Filtros V2 --- */
 .filters-sidebar-v2 {
     flex: 0 0 250px;
     background-color: var(--color-primario-verde);
@@ -671,7 +346,6 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--color-blanco);
 }
-
 .filter-group-v2 {
     margin-bottom: 25px;
 }
@@ -688,8 +362,6 @@ h1, h2, h3, h4 {
 .filter-group-v2 input[type="checkbox"] {
     margin-right: 10px;
 }
-
-/* --- Contenedor de la Cuadrícula V2 --- */
 .product-grid-container-v2 {
     flex: 1;
 }
@@ -702,13 +374,10 @@ h1, h2, h3, h4 {
     margin: 40px auto;
     padding: 0 20px;
 }
-
 .product-container-v2 {
     display: flex;
     gap: 50px;
 }
-
-/* --- Galería de Imágenes V2 --- */
 .product-gallery-v2 {
     flex: 1;
 }
@@ -731,8 +400,6 @@ h1, h2, h3, h4 {
 .product-gallery-v2__thumbnails .thumbnail--active {
     border-color: var(--color-acento-dorado);
 }
-
-/* --- Información de Producto V2 --- */
 .product-info-v2 {
     flex: 1;
     color: var(--color-texto-principal);
@@ -787,7 +454,7 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
 }
 .product-info-v2__add-to-cart-btn:hover {
-    background-color: #ffda73; /* Un dorado más claro */
+    background-color: #ffda73;
 }
 .product-details-v2 {
     margin-top: 30px;
@@ -804,7 +471,73 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 .product-details-v2 li::before {
-    content: '✨'; /* Usamos una estrella mágica como viñeta */
+    content: '✨';
     position: absolute;
     left: 0;
+}
+
+/* ============================================= */
+/* ================ FOOTER V2 ================== */
+/* ============================================= */
+.footer-v2 {
+    background-color: var(--color-primario-verde);
+    color: var(--color-texto-principal);
+    padding-top: 50px;
+    margin-top: 60px;
+}
+.footer-v2__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.footer-v2__column h4 {
+    font-size: 18px;
+    color: var(--color-blanco);
+    margin-bottom: 20px;
+}
+.footer-v2__column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-v2__column a {
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s ease;
+}
+.footer-v2__column a:hover {
+    color: var(--color-acento-dorado);
+}
+.footer-v2__newsletter {
+    display: flex;
+}
+.footer-v2__newsletter input {
+    flex-grow: 1;
+    border: none;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-principal);
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+}
+.footer-v2__newsletter button {
+    border: none;
+    background-color: var(--color-acento-dorado);
+    color: var(--color-fondo-oscuro);
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.footer-v2__bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
 }
