@@ -30,4 +30,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // 5. Hacemos que la función 'changeBackgroundImage' se ejecute cada 5 segundos
     setInterval(changeBackgroundImage, 5000); // 5000 milisegundos = 5 segundos
 
+    const thumbnailsContainer = document.getElementById('product-thumbnails');
+
+if (thumbnailsContainer) {
+    // 1. Seleccionamos la imagen principal
+    const mainImage = document.getElementById('main-product-image');
+    
+    // 2. Seleccionamos TODAS las imágenes miniatura
+    const thumbnails = thumbnailsContainer.querySelectorAll('img');
+
+    // 3. Creamos una función que se activa al hacer clic en una miniatura
+    function handleThumbnailClick(event) {
+        // 'event.target' es la miniatura específica en la que se hizo clic
+        const clickedThumbnail = event.target;
+
+        // Cambiamos el 'src' (la fuente de la imagen) de la imagen principal
+        // para que sea igual al 'src' de la miniatura en la que hicimos clic
+        mainImage.src = clickedThumbnail.src;
+
+        // Actualizamos la clase activa
+        // Primero, quitamos la clase 'thumbnail--active' de todas las miniaturas
+        thumbnails.forEach(thumb => {
+            thumb.classList.remove('thumbnail--active');
+        });
+
+        // Luego, añadimos la clase 'thumbnail--active' solo a la miniatura clickeada
+        clickedThumbnail.classList.add('thumbnail--active');
+    }
+
+    // 4. Añadimos un "detector de clics" (event listener) a cada miniatura
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', handleThumbnailClick);
+    });
+}
+
 });
