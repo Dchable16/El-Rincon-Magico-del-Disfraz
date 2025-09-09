@@ -457,6 +457,15 @@ body {
         flex: 0 0 auto; /* Resetea el ancho fijo en móviles */
         margin-bottom: 30px;
     }
+
+    /* --- AJUSTES DE LA PÁGINA DE PRODUCTO --- */
+    .product-container {
+        flex-direction: column; /* Apila la galería sobre la info */
+    }
+
+    .product-info__title {
+        font-size: 28px; /* Título más pequeño */
+    }
 }
 
 
@@ -543,4 +552,146 @@ body {
 /* --- Estilos para la cuadrícula de productos --- */
 .product-grid-container {
     flex: 1; /* El contenedor de productos ocupa todo el espacio restante */
+}
+
+/* ============================================= */
+/* ======== ESTILOS PÁGINA DE PRODUCTO ========= */
+/* ============================================= */
+
+.product-page-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Contenedor principal de 2 columnas */
+.product-container {
+    display: flex;
+    gap: 50px; /* Espacio grande entre las imágenes y la info */
+    margin-bottom: 60px;
+}
+
+/* --- Columna Izquierda: Galería de Imágenes --- */
+.product-gallery {
+    flex: 1; /* Ocupa la mitad del espacio */
+}
+
+.product-gallery__main-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery__thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.product-gallery__thumbnails img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.product-gallery__thumbnails img:hover {
+    border-color: #ccc;
+}
+
+.product-gallery__thumbnails .thumbnail--active {
+    border-color: #6a1b9a; /* Destaca la miniatura activa */
+}
+
+/* --- Columna Derecha: Información de Producto --- */
+.product-info {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+}
+
+.product-info__title {
+    font-size: 36px;
+    margin: 0 0 15px 0;
+}
+
+.product-info__price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6a1b9a;
+    margin-bottom: 25px;
+}
+
+.product-info__description {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.product-options__group {
+    margin-bottom: 30px;
+}
+
+.product-options__group label {
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.product-options__select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    font-size: 16px;
+}
+
+.product-info__add-to-cart-btn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d81b60; /* Fucsia para la acción principal */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-info__add-to-cart-btn:hover {
+    background-color: #ad1457;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-details {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Viñeta personalizada para la lista */
+.product-details li::before {
+    content: '✓';
+    color: #6a1b9a;
+    position: absolute;
+    left: 0;
+}
+
+/* --- Sección Productos Relacionados --- */
+.related-products {
+    border-top: 1px solid #eee;
+    padding-top: 40px;
 }
