@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- CÓDIGO DEL CARRUSEL DE HÉROE ---
     const heroSection = document.getElementById('hero-section');
-    // Solo ejecuta el código del carrusel si el elemento 'heroSection' existe
     if (heroSection) {
         const images = [
             'url("https://images.unsplash.com/photo-1541187714594-73d7516db213?q=80&w=2070")',
-            'url("https://images.unsplash.com/photo-1508224522488-8557a35436e2?q=80&w=2070")',
+            'url("https://images.unsplash.com/photo-15082245ص22488-8557a35436e2?q=80&w=2070")',
             'url("https://images.unsplash.com/photo-1571204052389-9a79a896d182?q=80&w=2070")'
         ];
         let currentImageIndex = 0;
@@ -43,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButton = document.querySelector('.filters-sidebar__button');
     if (filterButton) {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        const allProducts = document.querySelectorAll('.product-card');
+        // A CORREGIR: Usar la nueva clase de tarjeta de producto
+        const allProducts = document.querySelectorAll('.product-card-v2');
 
         function applyFilters() {
             const selectedFilters = { talla: [], ocasion: [] };
@@ -70,4 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
         filterButton.addEventListener('click', applyFilters);
     }
 
-}); 
+});
