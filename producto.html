@@ -8,113 +8,60 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="header__logo">
-            <h1>El Rincón Mágico</h1>
-        </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a href="categoria.html">Disfraces por Temática</a></li>
-                <li><a href="#">Disfraces por Edad</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Maquillaje</a></li>
-                <li><a href="#">Decoración</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#" class="header__nav-link--oferta">Ofertas</a></li>
-            </ul>
+    <header class="main-header">
+        </header>
+    <nav class="main-nav">
         </nav>
-    </header>
 
-    <main class="product-page-main">
-        <div class="product-container">
-            <div class="product-gallery">
-                <div class="product-gallery__main-image">
-                    <img src="https://placehold.co/600x800/c62828/ffffff?text=Héroe+1" alt="Vista principal del disfraz de superhéroe" id="main-product-image">
+    <main class="product-page-main-v2">
+        <div class="product-container-v2">
+            <div class="product-gallery-v2">
+                <div class="product-gallery-v2__main-image">
+                    <img src="https://placehold.co/600x800/c62828/ffffff?text=Héroe+1" alt="Vista principal del disfraz" id="main-product-image">
                 </div>
-                <div class="product-gallery__thumbnails" id="product-thumbnails">
+                <div class="product-gallery-v2__thumbnails" id="product-thumbnails">
                     <img src="https://placehold.co/100x120/c62828/ffffff?text=Vista+1" alt="Miniatura 1" class="thumbnail--active">
                     <img src="https://placehold.co/100x120/1e88e5/ffffff?text=Detalle+2" alt="Miniatura 2">
                     <img src="https://placehold.co/100x120/43a047/ffffff?text=Espalda+3" alt="Miniatura 3">
                 </div>
             </div>
 
-            <div class="product-info">
-                <h1 class="product-info__title">Disfraz de Héroe Cósmico</h1>
-                <p class="product-info__price">79.99 €</p>
-                <p class="product-info__description">
+            <div class="product-info-v2">
+                <h1 class="product-info-v2__title">Disfraz de Héroe Cósmico</h1>
+                <div class="product-info-v2__rating">
+                    <span>★★★★☆</span> 4.8/5 (12 reseñas)
+                </div>
+                <p class="product-info-v2__price">€79.99</p>
+                <p class="product-info-v2__description">
                     Conviértete en el guerrero más valiente de la galaxia con este traje. Perfecto para Carnaval, Halloween o cualquier fiesta temática. ¡Prepárate para salvar el universo con estilo!
                 </p>
 
-                <div class="product-options">
-                    <div class="product-options__group">
-                        <label for="size-select">Talla:</label>
-                        <select name="talla" id="size-select" class="product-options__select">
-                            <option value="">Selecciona una talla</option>
-                            <option value="s">S (Pequeña)</option>
-                            <option value="m">M (Mediana)</option>
-                            <option value="l">L (Grande)</option>
-                        </select>
-                    </div>
+                <div class="product-options-v2">
+                    <label for="size-select">TALLA:</label>
+                    <select name="talla" id="size-select">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
                 </div>
 
-                <button class="product-info__add-to-cart-btn">Añadir a la Cesta</button>
+                <button class="product-info-v2__add-to-cart-btn">AÑADIR A LA CESTA</button>
 
-                <div class="product-details">
-                    <h4>Lo que incluye el paquete:</h4>
+                <div class="product-details-v2">
+                    <h4>DETALLES DEL PRODUCTO</h4>
                     <ul>
-                        <li>Mono completo con detalles impresos</li>
-                        <li>Capa roja extraíble</li>
-                        <li>Cinturón de utilidad</li>
-                        <li>Máscara protectora</li>
+                        <li>Mono completo con detalles impresos de alta calidad.</li>
+                        <li>Capa roja extraíble con cierre de velcro.</li>
+                        <li>Material: 100% poliéster, cómodo y transpirable.</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <section class="related-products">
-            <h2 class="section-title">También te podría interesar</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://placehold.co/400x500/1565c0/ffffff?text=Héroe+2" alt="Disfraz de Superhéroe B">
-                    <div class="product-card__info">
-                        <h4>Traje de Vigilante Nocturna</h4>
-                        <p class="product-card__price">89.99 €</p>
-                        <a href="#" class="card-button">Ver Producto</a>
-                    </div>
-                </div>
-                </div>
-        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4 class="footer-column__title">El Rincón Mágico</h4>
-                <p>Tu tienda de disfraces y celebraciones para despertar la creatividad y la diversión en cada momento especial.</p>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-column__title">Enlaces Rápidos</h4>
-                <ul class="footer-column__list">
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Políticas de Envío</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-column__title">¡Ofertas Mágicas!</h4>
-                <p>Suscríbete para recibir descuentos exclusivos y novedades.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="tu.email@magico.com" class="newsletter-form__input">
-                    <button type="submit" class="newsletter-form__button">Suscribir</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 El Rincón Mágico del Disfraz y la Celebración. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    
-        <script src="script.js"></script>
+    <footer class="footer-v2">
+        </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
