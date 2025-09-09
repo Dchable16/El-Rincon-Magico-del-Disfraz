@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría de Productos - El Rincón Mágico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <h1>El Rincón Mágico</h1>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#">Disfraces por Temática</a></li>
+                <li><a href="#">Disfraces por Edad</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Maquillaje</a></li>
+                <li><a href="#">Decoración</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#" class="header__nav-link--oferta">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="category-header">
+            <h1 class="category-header__title">Disfraces de Superhéroes</h1>
+            <p class="category-header__description">Conviértete en el héroe que siempre quisiste ser con nuestra increíble colección de disfraces.</p>
+        </div>
+
+        <div class="category-container">
+            <aside class="filters-sidebar">
+                <h3 class="filters-sidebar__title">Filtros</h3>
+                <div class="filter-group">
+                    <h4>Por Talla</h4>
+                    <label><input type="checkbox" name="talla" value="s"> S</label>
+                    <label><input type="checkbox" name="talla" value="m"> M</label>
+                    <label><input type="checkbox" name="talla" value="l"> L</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Por Precio</h4>
+                    <input type="range" name="precio" min="10" max="200">
+                </div>
+                <div class="filter-group">
+                    <h4>Por Ocasión</h4>
+                    <label><input type="checkbox" name="ocasion" value="halloween"> Halloween</label>
+                    <label><input type="checkbox" name="ocasion" value="carnaval"> Carnaval</label>
+                </div>
+                <button class="filters-sidebar__button">Aplicar Filtros</button>
+            </aside>
+
+            <section class="product-grid-container">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x500/c62828/ffffff?text=Héroe+1" alt="Disfraz de Superhéroe A">
+                        <div class="product-card__info">
+                            <h4>Disfraz de Héroe Cósmico</h4>
+                            <p class="product-card__price">79.99 €</p>
+                            <a href="#" class="card-button">Ver Producto</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x500/1565c0/ffffff?text=Héroe+2" alt="Disfraz de Superhéroe B">
+                        <div class="product-card__info">
+                            <h4>Traje de Vigilante Nocturna</h4>
+                            <p class="product-card__price">89.99 €</p>
+                            <a href="#" class="card-button">Ver Producto</a>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        </footer>
+
+</body>
+</html>
