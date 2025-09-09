@@ -129,7 +129,6 @@ h1, h2, h3, h4 {
     transition: background-image 1s ease-in-out;
 }
 .section-title-v2 {
-    font-family: 'Cinzel', serif;
     text-align: center;
     font-size: 28px;
     color: var(--color-texto-principal);
@@ -362,6 +361,21 @@ h1, h2, h3, h4 {
 .filter-group-v2 input[type="checkbox"] {
     margin-right: 10px;
 }
+.filters-sidebar__button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-acento-dorado);
+    color: var(--color-fondo-oscuro);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.filters-sidebar__button:hover {
+    background-color: #ffda73;
+}
 .product-grid-container-v2 {
     flex: 1;
 }
@@ -376,10 +390,11 @@ h1, h2, h3, h4 {
 }
 .product-container-v2 {
     display: flex;
+    flex-wrap: wrap; /* Para responsive */
     gap: 50px;
 }
 .product-gallery-v2 {
-    flex: 1;
+    flex: 1 1 400px; /* Permite que se encoja y crezca */
 }
 .product-gallery-v2__main-image img {
     width: 100%;
@@ -401,7 +416,7 @@ h1, h2, h3, h4 {
     border-color: var(--color-acento-dorado);
 }
 .product-info-v2 {
-    flex: 1;
+    flex: 1 1 400px;
     color: var(--color-texto-principal);
 }
 .product-info-v2__title {
@@ -540,4 +555,25 @@ h1, h2, h3, h4 {
     text-align: center;
     font-size: 14px;
     color: var(--color-texto-secundario);
+}
+
+/* ============================================= */
+/* ============ DISEÑO RESPONSIVE ============== */
+/* ============================================= */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .category-container-v2 {
+        flex-direction: column;
+    }
+    .filters-sidebar-v2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
