@@ -215,58 +215,113 @@ h1, h2, h3, h4 {
     padding: 40px 20px; /* Espaciado interno */
 }
 
-/* Estilo general para los títulos de cada sección */
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 40px;
-}
-
 /* ============================================= */
 /* ====== ESTILOS DE TARJETAS (Cards) ========== */
 /* ============================================= */
 
-/* Usamos CSS Grid para un diseño de cuadrícula moderno y flexible */
-.collections-grid, .products-grid {
+.section-title-v2 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 28px;
+    color: var(--color-texto-principal);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* --- Cuadrícula de Productos V2 --- */
+.products-grid-v2 {
     display: grid;
-    /* Crea 3 columnas de igual tamaño en pantallas grandes */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cuadrícula responsive */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Estilo base para las tarjetas de colección y producto */
-.collection-card, .product-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- Tarjeta de Producto V2 --- */
+.product-card-v2 {
+    background-color: var(--color-blanco);
+    color: var(--color-fondo-oscuro);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
-.collection-card:hover, .product-card:hover {
-    transform: translateY(-5px); /* La tarjeta se eleva un poco */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* La sombra se intensifica */
+.product-card-v2__image-container {
+    position: relative;
 }
-
-/* Estilo para las imágenes dentro de las tarjetas */
-.collection-card img, .product-card img {
-    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+.product-card-v2__image-container img {
+    width: 100%;
     height: auto;
     display: block;
 }
 
-/* Estilo para la zona de información de la tarjeta */
-.collection-card__info, .product-card__info {
-    padding: 20px;
-    text-align: center;
+.product-card-v2__quick-view {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.product-card-v2:hover .product-card-v2__quick-view {
+    opacity: 1; /* El botón aparece al pasar el ratón */
 }
 
-.product-card__price {
+.product-card-v2__info {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    flex-grow: 1;
+}
+.product-card-v2__info h3 {
     font-size: 20px;
+    margin: 0 0 5px 0;
+}
+.product-card-v2__type {
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+.product-card-v2__rating {
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+    margin-bottom: 15px;
+}
+.product-card-v2__rating span {
+    color: var(--color-acento-dorado);
+}
+.product-card-v2__price {
+    font-size: 22px;
     font-weight: 700;
-    color: #6a1b9a; /* Color morado mágico */
-    margin: 10px 0;
+    margin: 0;
+}
+
+.product-card-v2__add-to-cart {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -25px; /* Mitad afuera */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease;
+}
+.product-card-v2__add-to-cart:hover {
+    background-color: var(--color-primario-verde);
 }
 
 /* Botón genérico para las tarjetas */
@@ -471,11 +526,6 @@ h1, h2, h3, h4 {
     }
 
     /* --- AJUSTES DE LAS CUADRÍCULAS (Grids) --- */
-    .collections-grid,
-    .products-grid {
-        /* Pasamos de 3 columnas a 1 sola */
-        grid-template-columns: 1fr;
-    }
     
     .footer-grid {
         /* Pasamos de 3 columnas a 1 sola en el pie de página */
