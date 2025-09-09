@@ -447,64 +447,78 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================= */
-/* =========== ESTILOS DEL FOOTER ============ */
+/* ================ FOOTER V2 ================== */
 /* ============================================= */
-
-.site-footer {
-    background-color: #333; /* Fondo oscuro para el footer */
-    color: #f4f4f4; /* Texto claro */
-    padding: 50px 0 0 0;
-    margin-top: 50px;
+.footer-v2 {
+    background-color: var(--color-primario-verde);
+    color: var(--color-texto-principal);
+    padding-top: 50px;
+    margin-top: 60px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 40px;
+.footer-v2__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
 }
 
-.footer-column h4 {
+.footer-v2__column h4 {
     font-size: 18px;
+    color: var(--color-blanco);
     margin-bottom: 20px;
-    color: #ffffff;
-    position: relative;
-    padding-bottom: 10px;
 }
 
-/* Línea decorativa debajo de los títulos del footer */
-.footer-column h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 30px;
-    height: 2px;
-    background-color: #6a1b9a; /* Morado mágico */
-}
-
-.footer-column p {
-    line-height: 1.7;
-    color: #ccc;
-}
-
-.footer-column__list {
+.footer-v2__column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-column__list a {
-    color: #ccc;
+.footer-v2__column a {
+    color: var(--color-texto-secundario);
     text-decoration: none;
     line-height: 2;
     transition: color 0.3s ease;
 }
 
-.footer-column__list a:hover {
-    color: #ffffff;
+.footer-v2__column a:hover {
+    color: var(--color-acento-dorado);
+}
+
+.footer-v2__newsletter {
+    display: flex;
+}
+
+.footer-v2__newsletter input {
+    flex-grow: 1;
+    border: none;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-principal);
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-v2__newsletter button {
+    border: none;
+    background-color: var(--color-acento-dorado);
+    color: var(--color-fondo-oscuro);
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-v2__bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
 }
 
 .newsletter-form__input {
