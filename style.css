@@ -24,80 +24,112 @@ h1, h2, h3, h4 {
     font-family: 'Cinzel', serif;
 }
 
-.header {
-    /* Usamos Flexbox para alinear el logo a la izquierda y la navegación a la derecha */
+/* --- Barra Superior --- */
+.top-bar {
+    background-color: #111;
+    color: var(--color-texto-secundario);
+    font-size: 12px;
+    padding: 8px 0;
+}
+.top-bar__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: right;
+}
+
+/* --- Encabezado Principal --- */
+.header-content {
     display: flex;
-    justify-content: space-between; /* Crea espacio entre los elementos */
-    align-items: center; /* Centra los elementos verticalmente */
-    
-    padding: 15px 30px; /* 15px de espacio arriba/abajo, 30px a los lados */
-    background-color: #ffffff; /* Fondo blanco para el header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
-    position: sticky; /* Hacemos que el header se quede fijo al hacer scroll */
-    top: 0;
-    z-index: 100; /* Asegura que el header esté por encima de otros elementos */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.header__logo h1 {
-    margin: 0; /* Quitamos el margen por defecto del h1 */
-    font-size: 24px; /* Tamaño de la fuente del logo */
-    color: #6a1b9a; /* Un color morado mágico */
+.header-content__logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-
-/* Estilos para la lista de navegación */
-.header__nav ul {
+.logo-brand__image {
+    height: 80px;
+}
+.logo-brand__text h1 {
+    font-size: 28px;
+    color: var(--color-blanco);
     margin: 0;
-    padding: 0;
-    list-style: none; /* Quitamos los puntos de la lista */
-    display: flex; /* Ponemos los elementos en fila */
-    gap: 25px; /* Espacio entre cada elemento del menú */
+    line-height: 1;
+}
+.logo-brand__text h2 {
+    font-family: 'Lato', sans-serif; /* Usamos la fuente normal para el subtítulo */
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-/* Estilos para cada enlace del menú */
-.header__nav a {
-    text-decoration: none; /* Quitamos el subrayado de los enlaces */
-    color: #333; /* Color de texto oscuro */
-    font-weight: 700; /* Hacemos la letra negrita */
+/* --- Barra de Búsqueda --- */
+.header-content__search {
+    display: flex;
+    border: 1px solid var(--color-primario-verde);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header-content__search input {
+    background-color: var(--color-fondo-oscuro);
+    border: none;
+    padding: 12px 15px;
+    color: var(--color-texto-principal);
+    min-width: 250px;
+}
+.header-content__search button {
+    background-color: var(--color-primario-verde);
+    border: none;
+    color: var(--color-blanco);
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* --- Barra de Navegación Principal --- */
+.main-nav {
+    background-color: var(--color-primario-verde);
+    padding: 10px 0;
+}
+.main-nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+.main-nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
     font-size: 16px;
-    padding: 5px 0; /* Pequeño espacio para el efecto de subrayado */
-    position: relative; /* Necesario para el efecto de la línea inferior */
-    transition: color 0.3s ease; /* Transición suave para el color */
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+.main-nav a:hover {
+    border-bottom-color: var(--color-acento-dorado);
 }
 
-/* Efecto al pasar el ratón por encima de un enlace */
-.header__nav a:hover {
-    color: #6a1b9a; /* Cambia a color morado */
-}
-
-/* Línea animada que aparece debajo del enlace al pasar el ratón */
-.header__nav a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #6a1b9a;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0); /* La línea empieza sin anchura */
-    transform-origin: center;
-    transition: transform 0.3s ease; /* Animación suave */
-}
-
-.header__nav a:hover::after {
-    transform: scaleX(1); /* La línea crece hasta el 100% de la anchura */
-}
-
-/* Estilo especial para el enlace de "Ofertas" */
-.header__nav-link--oferta {
-    color: #d81b60; /* Un color rosa/fucsia para destacar */
-}
-
-.header__nav-link--oferta:hover {
-    color: #ad1457; /* Un fucsia más oscuro al pasar el ratón */
-}
-
-.header__nav-link--oferta::after {
-    background-color: #d81b60; /* La línea animada también cambia de color */
+/* --- Hero Carrusel V2 --- */
+.hero-v2 {
+    height: 500px; /* Altura fija para el carrusel */
+    max-width: 1200px;
+    margin: 30px auto; /* Espacio arriba y abajo */
+    border-radius: 10px;
+    background-image: url('https://images.unsplash.com/photo-1541187714594-73d7516db213?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
 }
 
 .hero {
