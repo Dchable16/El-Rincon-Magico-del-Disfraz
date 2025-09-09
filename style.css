@@ -1,20 +1,27 @@
 /* Importamos una fuente mágica y divertida desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap');
+:root {
+    --color-fondo-oscuro: #1e1d2b;
+    --color-primario-verde: #0f3d3d;
+    --color-acento-dorado: #ffc107;
+    --color-texto-principal: #e0e0e0;
+    --color-texto-secundario: #a0a0a0;
+    --color-blanco: #ffffff;
+}
 
-/* Estilos para todo el cuerpo de la página */
 body {
-    /* Familia de fuentes: Primero intenta con Poppins, si no, usa una fuente genérica sans-serif */
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo-oscuro);
+    /* Opcional: Para un fondo con textura como el de la imagen, puedes usar una imagen sutil */
+    /* background-image: url('URL_DE_TU_IMAGEN_DE_FONDO_SUTIL'); */
     
-    /* Color de fondo suave para empezar */
-    background-color: #f5f0ff; /* Un lila muy claro */
-
-    /* Color de texto principal */
-    color: #333;
-
-    /* Quitamos los márgenes por defecto del navegador */
+    font-family: 'Lato', sans-serif; /* Nueva fuente base para el texto */
+    color: var(--color-texto-principal);
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
 }
 
 .header {
