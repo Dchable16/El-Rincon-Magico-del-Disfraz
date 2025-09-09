@@ -92,3 +92,75 @@ body {
 .header__nav-link--oferta::after {
     background-color: #d81b60; /* La línea animada también cambia de color */
 }
+
+.hero {
+    /* Establecemos una altura relativa a la ventana del navegador */
+    height: 60vh; /* Ocupará el 60% de la altura de la pantalla */
+    
+    /* Imagen de fondo */
+    /* **IMPORTANTE**: Reemplaza la URL con una de tus propias imágenes */
+    background-image: url('https://images.unsplash.com/photo-1541187714594-73d7516db213?q=80&w=2070');
+    background-size: cover; /* La imagen cubre todo el espacio sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+    /* Usamos Flexbox para centrar el contenido fácilmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    position: relative; /* Necesario para el efecto de superposición de color */
+}
+
+/* Capa de color semitransparente sobre la imagen para mejorar la legibilidad del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
+    z-index: 1; /* Se coloca entre la imagen de fondo y el contenido */
+}
+
+/* Contenedor del texto para que se muestre por encima de la capa de color */
+.hero__content {
+    position: relative;
+    z-index: 2; /* Se coloca por encima de la capa ::before */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 20px;
+}
+
+.hero__title {
+    font-size: 48px; /* Tamaño grande para el título principal */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Estilo para el botón de llamada a la acción (CTA) */
+.hero__cta-button {
+    display: inline-block;
+    background-color: #d81b60; /* El mismo color fucsia de "Ofertas" */
+    color: #ffffff;
+    padding: 15px 35px; /* Espaciado interno para hacerlo más grande */
+    border-radius: 50px; /* Bordes completamente redondeados */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para que resalte */
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+}
+
+.hero__cta-button:hover {
+    background-color: #ad1457; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Se eleva un poco */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* La sombra se hace más pronunciada */
+}
