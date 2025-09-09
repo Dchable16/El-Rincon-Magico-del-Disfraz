@@ -695,143 +695,116 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================= */
-/* ======== ESTILOS PÁGINA DE PRODUCTO ========= */
+/* ======== PÁGINA DE PRODUCTO V2 ============== */
 /* ============================================= */
-
-.product-page-main {
-    max-width: 1200px;
+.product-page-main-v2 {
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Contenedor principal de 2 columnas */
-.product-container {
+.product-container-v2 {
     display: flex;
-    gap: 50px; /* Espacio grande entre las imágenes y la info */
-    margin-bottom: 60px;
+    gap: 50px;
 }
 
-/* --- Columna Izquierda: Galería de Imágenes --- */
-.product-gallery {
-    flex: 1; /* Ocupa la mitad del espacio */
+/* --- Galería de Imágenes V2 --- */
+.product-gallery-v2 {
+    flex: 1;
 }
-
-.product-gallery__main-image img {
+.product-gallery-v2__main-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
-.product-gallery__thumbnails {
+.product-gallery-v2__thumbnails {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
-
-.product-gallery__thumbnails img {
+.product-gallery-v2__thumbnails img {
     width: 80px;
-    height: 100px;
-    object-fit: cover; /* Evita que la imagen se deforme */
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
-
-.product-gallery__thumbnails img:hover {
-    border-color: #ccc;
+.product-gallery-v2__thumbnails .thumbnail--active {
+    border-color: var(--color-acento-dorado);
 }
 
-.product-gallery__thumbnails .thumbnail--active {
-    border-color: #6a1b9a; /* Destaca la miniatura activa */
+/* --- Información de Producto V2 --- */
+.product-info-v2 {
+    flex: 1;
+    color: var(--color-texto-principal);
 }
-
-/* --- Columna Derecha: Información de Producto --- */
-.product-info {
-    flex: 1; /* Ocupa la otra mitad del espacio */
-}
-
-.product-info__title {
+.product-info-v2__title {
     font-size: 36px;
     margin: 0 0 15px 0;
+    color: var(--color-blanco);
 }
-
-.product-info__price {
-    font-size: 28px;
+.product-info-v2__rating {
+    margin-bottom: 15px;
+    color: var(--color-texto-secundario);
+}
+.product-info-v2__rating span {
+    color: var(--color-acento-dorado);
+}
+.product-info-v2__price {
+    font-size: 32px;
     font-weight: 700;
-    color: #6a1b9a;
+    color: var(--color-acento-dorado);
     margin-bottom: 25px;
 }
-
-.product-info__description {
+.product-info-v2__description {
     line-height: 1.7;
     margin-bottom: 30px;
 }
-
-.product-options__group {
+.product-options-v2 {
     margin-bottom: 30px;
 }
-
-.product-options__group label {
+.product-options-v2 label {
     font-weight: 700;
     margin-right: 15px;
 }
-
-.product-options__select {
+.product-options-v2 select {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-principal);
+    border: 1px solid var(--color-primario-verde);
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    min-width: 200px;
-    font-size: 16px;
 }
-
-.product-info__add-to-cart-btn {
+.product-info-v2__add-to-cart-btn {
     width: 100%;
     padding: 18px;
     border: none;
     border-radius: 5px;
-    background-color: #d81b60; /* Fucsia para la acción principal */
-    color: #ffffff;
-    font-size: 18px;
+    background-color: var(--color-acento-dorado);
+    color: var(--color-fondo-oscuro);
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
 }
-
-.product-info__add-to-cart-btn:hover {
-    background-color: #ad1457;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+.product-info-v2__add-to-cart-btn:hover {
+    background-color: #ffda73; /* Un dorado más claro */
 }
-
-.product-details {
+.product-details-v2 {
     margin-top: 30px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--color-primario-verde);
     padding-top: 20px;
 }
-
-.product-details ul {
+.product-details-v2 ul {
     list-style: none;
     padding-left: 0;
 }
-
-.product-details li {
-    margin-bottom: 10px;
+.product-details-v2 li {
     padding-left: 20px;
     position: relative;
+    margin-bottom: 10px;
 }
-
-/* Viñeta personalizada para la lista */
-.product-details li::before {
-    content: '✓';
-    color: #6a1b9a;
+.product-details-v2 li::before {
+    content: '✨'; /* Usamos una estrella mágica como viñeta */
     position: absolute;
     left: 0;
-}
-
-/* --- Sección Productos Relacionados --- */
-.related-products {
-    border-top: 1px solid #eee;
-    padding-top: 40px;
 }
