@@ -448,6 +448,15 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .category-container {
+        flex-direction: column; /* Apila los filtros sobre los productos */
+    }
+    
+    .filters-sidebar {
+        flex: 0 0 auto; /* Resetea el ancho fijo en móviles */
+        margin-bottom: 30px;
+    }
 }
 
 
