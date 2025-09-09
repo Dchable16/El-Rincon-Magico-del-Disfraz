@@ -628,88 +628,70 @@ h1, h2, h3, h4 {
 
 
 /* ============================================= */
-/* ====== ESTILOS PÁGINA DE CATEGORÍA ========== */
+/* ====== PÁGINA DE CATEGORÍA V2 =============== */
 /* ============================================= */
 
-.category-header {
+.category-header-v2 {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #e1d4f9; /* Mismo lila que la sección de inspiración */
+    padding: 50px 20px;
+    background-color: #111; /* Un negro un poco más suave */
 }
-
-.category-header__title {
+.category-header-v2 h1 {
     margin: 0 0 10px 0;
     font-size: 42px;
+    color: var(--color-blanco);
 }
-
-.category-header__description {
+.category-header-v2 p {
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto;
-    color: #555;
+    color: var(--color-texto-secundario);
 }
 
-/* Contenedor principal que divide la página en 2 columnas */
-.category-container {
-    display: flex; /* ¡La clave para las 2 columnas! */
+.category-container-v2 {
+    display: flex;
     gap: 30px;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+    align-items: flex-start; /* Alinea los items al inicio */
 }
 
-/* --- Estilos para la barra lateral de filtros --- */
-.filters-sidebar {
-    flex: 0 0 250px; /* La barra lateral no crece y tiene un ancho fijo de 250px */
-    background-color: #ffffff;
+/* --- Barra de Filtros V2 --- */
+.filters-sidebar-v2 {
+    flex: 0 0 250px;
+    background-color: var(--color-primario-verde);
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    height: fit-content; /* Se ajusta a la altura de su contenido */
 }
-
-.filters-sidebar__title {
-    font-size: 20px;
+.filters-sidebar-v2 h3 {
+    font-size: 22px;
     margin: 0 0 20px 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-blanco);
 }
 
-.filter-group {
+.filter-group-v2 {
     margin-bottom: 25px;
 }
-
-.filter-group h4 {
-    margin: 0 0 15px 0;
+.filter-group-v2 h4 {
     font-size: 16px;
+    color: var(--color-acento-dorado);
+    margin-bottom: 15px;
 }
-
-.filter-group label {
-    display: block; /* Para que cada checkbox esté en su propia línea */
+.filter-group-v2 label {
+    display: block;
     margin-bottom: 10px;
     cursor: pointer;
 }
-
-.filters-sidebar__button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #6a1b9a;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.filter-group-v2 input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-.filters-sidebar__button:hover {
-    background-color: #4a148c;
-}
-
-/* --- Estilos para la cuadrícula de productos --- */
-.product-grid-container {
-    flex: 1; /* El contenedor de productos ocupa todo el espacio restante */
+/* --- Contenedor de la Cuadrícula V2 --- */
+.product-grid-container-v2 {
+    flex: 1;
 }
 
 /* ============================================= */
