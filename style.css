@@ -267,3 +267,124 @@ body {
     max-width: 600px;
     margin: 0 auto 30px auto; /* Centra el párrafo */
 }
+
+.testimonials-section {
+    padding-bottom: 40px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-left: 5px solid #6a1b9a; /* Borde izquierdo morado para destacar */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 800px; /* Ancho máximo para que no sea muy largo */
+    margin: 0 auto; /* Centra la tarjeta */
+    text-align: center;
+}
+
+.testimonial-card__quote {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
+.testimonial-card__author {
+    font-weight: 700;
+    color: #333;
+    font-style: normal;
+}
+
+/* ============================================= */
+/* =========== ESTILOS DEL FOOTER ============ */
+/* ============================================= */
+
+.site-footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #f4f4f4; /* Texto claro */
+    padding: 50px 0 0 0;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo de los títulos del footer */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #6a1b9a; /* Morado mágico */
+}
+
+.footer-column p {
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.footer-column__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column__list a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s ease;
+}
+
+.footer-column__list a:hover {
+    color: #ffffff;
+}
+
+.newsletter-form__input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.newsletter-form__button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6a1b9a;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form__button:hover {
+    background-color: #4a148c;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+}
